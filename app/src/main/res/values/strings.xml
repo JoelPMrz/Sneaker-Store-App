@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Products</string>
+    <string name="description_image_product">Imagen del producto</string>
+    <string name="recomended">Artículos recomendados</string>
+    <string name="add_shop">Añadir al carrito</string>
+</resources>

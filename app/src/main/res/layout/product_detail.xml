@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/imgFotoDetail"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:contentDescription="@string/description_image_product"
+        android:scaleType="centerCrop"
+        android:background="@color/grey"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tvNameDetail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text="Nike Air Force 1 Low"
+        android:textSize="28sp"
+        android:paddingTop="8dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        app:layout_constraintTop_toBottomOf="@+id/imgFotoDetail"
+        app:layout_constraintStart_toStartOf="@+id/imgFotoDetail"/>
+
+    <TextView
+        android:id="@+id/tvTypeDetail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text="Zapatillas Mujer"
+        android:textSize="18sp"
+        android:paddingTop="8dp"
+        android:textColor="@color/dark_grey"
+        android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+        app:layout_constraintTop_toBottomOf="@+id/tvNameDetail"
+        app:layout_constraintStart_toStartOf="@+id/imgFotoDetail"/>
+
+    <TextView
+        android:id="@+id/tvDescriptionDetail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text="Sube el listón con las Nike Court Vision Alta. El diseño moderno combina piel en la parte superior con la elevación perfecta debajo. El look de baloncesto elevado ofrece la máxima suavidad e incorpora una lengüeta ultrasuave."
+        android:paddingTop="8dp"
+        android:textSize="18sp"
+        android:textAppearance="@style/MaterialAlertDialog.Material3.Body.Text"
+        app:layout_constraintTop_toBottomOf="@+id/tvTypeDetail"
+        app:layout_constraintStart_toStartOf="@+id/imgFotoDetail"/>
+
+
+    <GridLayout
+        android:id="@+id/gridLayoutTallas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="4"
+        android:rowCount="2"
+        android:layout_gravity="center"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDescriptionDetail">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:layout_columnWeight="1"
+            android:backgroundTint="@color/red_translucent"
+            android:text="38" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:layout_columnWeight="1"
+            android:backgroundTint="@color/red_translucent"
+            android:text="39" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:layout_columnWeight="1"
+            android:backgroundTint="@color/red_translucent"
+            android:text="40" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:layout_columnWeight="1"
+            android:backgroundTint="@color/red_translucent"
+            android:text="41" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_columnWeight="1"
+            android:backgroundTint="@color/red_translucent"
+            android:text="42" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_columnWeight="1"
+            android:backgroundTint="@color/red_translucent"
+            android:text="43" />
+
+    </GridLayout>
+
+
+
+    <TextView
+        android:id="@+id/tvPriceDetail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text="29.99 €"
+        android:textSize="30sp"
+        android:paddingTop="32dp"
+        android:textAppearance="?attr/textAppearanceHeadline6"
+        app:layout_constraintTop_toBottomOf="@+id/gridLayoutTallas"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+        android:id="@+id/btnShop"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/red"
+        android:text="@string/add_shop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridLayoutTallas"
+        app:layout_constraintEnd_toStartOf="@+id/tvPriceDetail"
+        app:layout_constraintBottom_toBottomOf="@+id/tvPriceDetail"/>
+
+    <TextView
+        android:id="@+id/tvMoreDetail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/recomended"
+        android:textSize="22sp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/btnShop"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvMoreDetail"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/gridLayoutMore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:scrollbars="none">
+
+            <ImageView
+                android:id="@+id/imgMoreDetail"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginEnd="12dp"
+                android:background="@color/grey"/>
+
+            <ImageView
+                android:id="@+id/imgMoreDetail2"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginEnd="12dp"
+                android:background="@color/grey"/>
+
+            <ImageView
+                android:id="@+id/imgMoreDetail3"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginEnd="12dp"
+                android:background="@color/grey"/>
+
+            <ImageView
+                android:id="@+id/imgMoreDetail4"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginEnd="12dp"
+                android:background="@color/grey"/>
+
+            <ImageView
+                android:id="@+id/imgMoreDetail5"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginEnd="12dp"
+                android:background="@color/grey"/>
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
