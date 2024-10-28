@@ -1,1 +1,1 @@
-![Repositorio Banner](Sneaker Store App.png)
+![Repositorio Banner](Sneaker%20Store%20App.png)
